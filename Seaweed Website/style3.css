@@ -52,13 +52,13 @@ nav img {
   bottom: 0;
   left: 0;
   background-color: #17a352;
-  transform: scaleX(0); /* Initially, set the underline to zero width */
+  transform: scaleX(0); 
   transform-origin: bottom right;
-  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  transition: transform 0.3s ease; 
 }
 
 .nav-links ul li a:hover::before {
-  transform: scaleX(1); /* Expand the underline on hover */
+  transform: scaleX(1); 
   transform-origin: bottom left;
 }
 
@@ -66,7 +66,7 @@ nav img {
 .nav-links ul li a:hover::before {
   transform: scaleX(
     1
-  ); /* Expand the underline for the active link and on hover */
+  ); 
   transform-origin: bottom left;
 }
 
@@ -178,6 +178,7 @@ p {
   font-weight: 300px;
   line-height: 22px;
   padding: 10px;
+  text-align: justify;
 }
 
 .row {
@@ -255,7 +256,7 @@ p {
 .layer h3 {
   width: 100%;
   font-weight: 500;
-  color: #fff;
+  color: #000000;
   font-size: 20px;
   bottom: 0;
   left: 50%;
@@ -270,7 +271,7 @@ p {
   opacity: 1;
 }
 .layer:hover {
-  background: #0c6b248f;
+  background: #ffffffc5;
 }
 .facilities {
   width: 80%;
