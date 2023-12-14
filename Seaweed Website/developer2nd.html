@@ -38,53 +38,6 @@
 
     <!-- Modernizr JS File -->
     <script src="js/modernizr.custom.js"></script>
-
-    <style>
-        .developer {
-            text-transform: uppercase;
-            background-image: linear-gradient(
-                -225deg,
-                #0c86b6 0%,
-                #37c00d 29%,
-                #839905 67%,
-                #f06406 100%
-            );
-            background-size: auto auto;
-            background-clip: border-box;
-            background-size: 200% auto;
-            color: #fff;
-            background-clip: text;
-            text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: textclip 2s linear infinite;
-            display: inline-block;
-            font-size: 120px;
-            text-align: center;
-        }
-
-        @keyframes textclip {
-            to {
-                background-position: 200% center;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-        .developer {
-            font-size: 30px; /* Adjust the font size for smaller screens */
-            text-align: center;
-            margin-top: 120px;
-        }
-        
-    }
-    @media only screen and (max-width: 600px) {
-    .seagrass {
-        display: none; /* Hide the element on smaller screens */
-        font-size: 65px; /* Adjust the font size for smaller screens */
-        text-align: center;
-    }
-}
-    </style>
 </head>
 
 
@@ -93,8 +46,7 @@
 		
         <nav>
             <a href="index.html"><img src="images/logoseaweed.png" alt=""></a>
-            <h3 class="seagrass">SEAGRASS</h3>
-
+            <h3 style="color: white;">SEAGRASS</h3>
             
                 <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
@@ -110,11 +62,11 @@
                 </ul>
                 </div>
                 
-                <i class="" onclick="showMenu()"></i>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
                 
         </nav>
-         
-        <h1 class="developer">Developers</h1>
+        
+        <h1>Developers</h1>
                         
     </section>
 <!-- Header Starts -->
@@ -123,23 +75,14 @@
    
     <!-- Fixed Navigation Ends -->
     <!-- Mobile Menu Starts -->
-    <nav role="navigation" class="media">
+    <nav role="navigation" class="d-block d-lg-none">
         <div id="menuToggle">
             <input type="checkbox">
             <span></span>
             <span></span>
             <span></span>
             <ul class="list-unstyled" id="menu">
-                
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="seaweed.html">SEAGRASS</a></li>
-                    <li><a href="aboutus.html">ABOUT US</a></li>
-                    <li><a href="contactus.html">CONTACT US</a></li>
-                    <li><a href="developer.html">DEVELOPERS</a></li>
-                    <!-- <li><a href="signup.html">SIGN UP</a></li>
-                    <li><a href="login.html">LOGIN</a></li> -->
-                    
-                </ul>
+              
             </ul>
         </div>
     </nav>
@@ -160,13 +103,13 @@
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="https://www.facebook.com/reynand.sabas" class="d-block position-relative overflow-hidden">
+                        <a href="reinan.html" class="d-block position-relative overflow-hidden">
                             <img src="images/reinan.jpg" class="img-fluid" alt="">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="https://www.facebook.com/reynand.sabas">Reinan B. Sabas</a></h3>
+                            <h3><a href="reinan.html">Reinan B. Sabas</a></h3>
                         </div>
                         <div class="entry-content open-sans-font">
                             <p>Bachelor of Science in Information Technology Major in Database System
@@ -175,17 +118,16 @@
                     </div>
                 </article>
             </div>
-            
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="https://dredabyte.github.io/my-portfolio/" class="d-block position-relative overflow-hidden">
-                            <img src="images/aldred.jpg" class="img-fluid" alt="">
+                        <a href="andy.html" class="d-block position-relative overflow-hidden">
+                            <img src="images/andy.jpg" class="img-fluid" alt="">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="https://dredabyte.github.io/my-portfolio/">Aeldred John Y. Tañahura </a></h3>
+                            <h3><a href="andy.html">Andy Von M. Simbajon</a></h3>
                         </div>
                         <div class="entry-content open-sans-font">
                             <p>Bachelor of Science in Information Technology Major in Database System
@@ -197,14 +139,14 @@
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="https://pi-viulet.github.io/portfolio1.0/" class="d-block position-relative overflow-hidden">
-                            <img src="images/eliza.jpg" class="img-fluid" alt="">
+                        <a href="vinz.html" class="d-block position-relative overflow-hidden">
+                            <img src="images/vince.jpg" class="img-fluid" alt="">
                         </a>
                     </div>
                     
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="https://pi-viulet.github.io/portfolio1.0/">Eliza Estole Silvoza</a></h3>
+                            <h3><a href="vinz.html">Vincent Jhanrey S. Jalalon</a></h3>
                         </div>
                         <div class="entry-content open-sans-font">
                             <p>Bachelor of Science in Information Technology Major in Database System
@@ -213,64 +155,6 @@
                     </div>
                 </article>
             </div>
-            <div class="row">
-                <!-- Article Starts -->
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
-                    <article class="post-container">
-                        <div class="post-thumb">
-                            <a href="https://www.facebook.com/profile.php?id=100084802695012" class="d-block position-relative overflow-hidden">
-                                <img src="images/kris.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="post-content">
-                            <div class="entry-header">
-                                <h3><a href="https://www.facebook.com/profile.php?id=100084802695012">Kristine Labucana </a></h3>
-                            </div>
-                            <div class="entry-content open-sans-font">
-                                <p>Bachelor of Science in Information Technology Major in Database System
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
-                    <article class="post-container">
-                        <div class="post-thumb">
-                            <a href="https://lablinng.github.io/tinoy-porfolio/" class="d-block position-relative overflow-hidden">
-                                <img src="images/love.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="post-content">
-                            <div class="entry-header">
-                                <h3><a href="https://lablinng.github.io/tinoy-porfolio/">LOVELY JEAN TINOY</a></h3>
-                            </div>
-                            <div class="entry-content open-sans-font">
-                                <p>Bachelor of Science in Information Technology Major in Database System
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
-                    <article class="post-container">
-                        <div class="post-thumb">
-                            <a href="https://www.facebook.com/profile.php?id=100087589355058" class="d-block position-relative overflow-hidden">
-                                <img src="images/daw.png" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        
-                        <div class="post-content">
-                            <div class="entry-header">
-                                <h3><a href="https://www.facebook.com/profile.php?id=100087589355058">Princess Dawn Sejalbo</a></h3>
-                            </div>
-                            <div class="entry-content open-sans-font">
-                                <p>Bachelor of Science in Information Technology Major in Database System
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
             <!-- Article Ends -->
             <!-- Article Starts -->
            
