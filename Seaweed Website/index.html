@@ -11,6 +11,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="shortcut icon" href="images/logoseaweed.png" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	</head>
 	
 	<body>
@@ -39,11 +40,20 @@
 			</nav>
 		  
 			<div class="video-wrapper">
-			  <div class="text-box">
-				<h1>seagrass.</h1>
-				<p>Dive into Diversity: Unveiling the Wonders of Seagrass - Explore a Kaleidoscope of Coastal Elegance!</p>
-				<a href="" class="hero-btn">VISIT US TO KNOW MORE</a>
-			  </div>
+				<div class="text-box">
+					<h1>seagrass.</h1>
+					<p>Dive into Diversity: Unveiling the Wonders of Seagrass - Explore a Kaleidoscope of Coastal Elegance!</p>
+					<a href="#" class="hero-btn" onclick="openModal()">VISIT US TO KNOW MORE</a>
+				</div>
+			</div>
+		
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close-btn" onclick="closeModal()">&times;</span>
+					<h2>Scan with Camera</h2>
+					<p>Click the button below to open the camera and start scanning.</p>
+					<button onclick="openCamera()">Open Camera</button>
+				</div>
 			</div>
 		  </section>
 		  
@@ -153,6 +163,20 @@
 			function hideMenu()
 			{
 				navLinks.style.right= "-200px";
+			}
+		</script>
+		<script>
+			function openModal() {
+				document.getElementById('myModal').style.display = 'flex';
+				openCamera(); 
+			}
+	
+			function closeModal() {
+				document.getElementById('myModal').style.display = 'none';
+			}
+	
+			function openCamera() {
+				alert('Camera opened for scanning.');
 			}
 		</script>
 		<script src="js/scrollreveal.min.js"></script>
