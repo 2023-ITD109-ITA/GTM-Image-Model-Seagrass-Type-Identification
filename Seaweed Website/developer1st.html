@@ -38,6 +38,51 @@
 
     <!-- Modernizr JS File -->
     <script src="js/modernizr.custom.js"></script>
+
+    <style>
+        .developer {
+            text-transform: uppercase;
+            background-image: linear-gradient(
+                -225deg,
+                #0c86b6 0%,
+                #37c00d 29%,
+                #839905 67%,
+                #f06406 100%
+            );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+            font-size: 120px;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+        .developer {
+            font-size: 30px; /* Adjust the font size for smaller screens */
+            text-align: center;
+            margin-top: 120px;
+        }
+       }
+    @media only screen and (max-width: 600px) {
+    .seagrass {
+        display: none; /* Hide the element on smaller screens */
+        font-size: 65px; /* Adjust the font size for smaller screens */
+        text-align: center;
+    }
+}
+    </style>
 </head>
 
 
@@ -46,7 +91,7 @@
 		
         <nav>
             <a href="index.html"><img src="images/logoseaweed.png" alt=""></a>
-            <h3 style="color: white;">SEAGRASS</h3>
+            <h3 class="seagrass">SEAGRASS</h3>
             
                 <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
@@ -62,11 +107,12 @@
                 </ul>
                 </div>
                 
-                <i class="fa fa-bars" onclick="showMenu()"></i>
+                <i class="" onclick="showMenu()"></i>
                 
         </nav>
         
-        <h1>Developers</h1>
+    
+        <h1 class="developer">Developers</h1>
                         
     </section>
 <!-- Header Starts -->
@@ -82,7 +128,16 @@
             <span></span>
             <span></span>
             <ul class="list-unstyled" id="menu">
-              
+    
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="seaweed.html">SEAGRASS</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                    <li><a href="developer.html">DEVELOPERS</a></li>
+                    <!-- <li><a href="signup.html">SIGN UP</a></li>
+                    <li><a href="login.html">LOGIN</a></li> -->
+                    
+                
             </ul>
         </div>
     </nav>
@@ -103,13 +158,13 @@
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="jerome.html" class="d-block position-relative overflow-hidden">
-                            <img src="images/jerome.jpg" class="img-fluid" alt="">
+                        <a href="https://andyvon28.github.io/my-portfolio/Portfolio-Website-main/" class="d-block position-relative overflow-hidden">
+                            <img src="images/andy.jpg" class="img-fluid" alt="">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="jerome.html">Jerome B. Porcado</a></h3>
+                            <h3><a href="https://andyvon28.github.io/my-portfolio/Portfolio-Website-main/">Andy Von M. Simbajon</a></h3>
                         </div>
                         <div class="entry-content open-sans-font">
                             <p>Bachelor of Science in Information Technology Major in Database System
@@ -123,13 +178,13 @@
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="aldred.html" class="d-block position-relative overflow-hidden">
-                            <img src="images/aldred.jpg" class="img-fluid" alt="">
+                        <a href="https://francelee123.github.io/Portfolio/" class="d-block position-relative overflow-hidden">
+                            <img src="images/elah.jpg" class="img-fluid" alt="">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="aldred.html">Aeldred John Y. Tanahura</a></h3>
+                            <h3><a href="https://francelee123.github.io/Portfolio/">Elah Quitoriano</a></h3>
                         </div>
                         <div class="entry-content open-sans-font">
                             <p>Bachelor of Science in Information Technology Major in Database System
@@ -143,13 +198,13 @@
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="jireh.html" class="d-block position-relative overflow-hidden">
-                            <img src="images/rancho.jpg" class="img-fluid" alt="">
+                        <a href="https://johnna025.github.io/Portfolio101/" class="d-block position-relative overflow-hidden">
+                            <img src="images/siarot.jpg" class="img-fluid" alt="">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="jireh.html">Jireh B. Magellanes</a></h3>
+                            <h3><a href="https://johnna025.github.io/Portfolio101/">Johnna May Tecson Siarot </a></h3>
                         </div>
                         <div class="entry-content open-sans-font">
                             <p>Bachelor of Science in Information Technology Major in Database System
@@ -158,6 +213,126 @@
                     </div>
                 </article>
             </div>
+            <div class="row">
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://hannahrics.github.io/Portfolio/" class="d-block position-relative overflow-hidden">
+                                <img src="images/hannah.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://hannahrics.github.io/Portfolio/">Hannah Dianne Ricablanca</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Bachelor of Science in Information Technology Major in Database System
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.facebook.com/vangogharellano" class="d-block position-relative overflow-hidden">
+                                <img src="images/van.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://www.facebook.com/vangogharellano">Van Jason Arellano </a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Bachelor of Science in Information Technology Major in Database System
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://donellerix.github.io/portfolio1.0/" class="d-block position-relative overflow-hidden">
+                                <img src="images/hannie.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://donellerix.github.io/portfolio1.0/">Hannie Donelle Ricablanca</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Bachelor of Science in Information Technology Major in Database System
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="row">
+                    <!-- Article Starts -->
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                        <article class="post-container">
+                            <div class="post-thumb">
+                                <a href="https://jalalon11.github.io/portfolio" class="d-block position-relative overflow-hidden">
+                                    <img src="images/vince.jpg" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <div class="entry-header">
+                                    <h3><a href="https://jalalon11.github.io/portfolio">VINCENT JHANREY JALALON</a></h3>
+                                </div>
+                                <div class="entry-content open-sans-font">
+                                    <p>Bachelor of Science in Information Technology Major in Database System
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Article Ends -->
+                    <!-- Article Starts -->
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                        <article class="post-container">
+                            <div class="post-thumb">
+                                <a href="https://www.facebook.com/fitor1a" class="d-block position-relative overflow-hidden">
+                                    <img src="images/cuy.jpg" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <div class="entry-header">
+                                    <h3><a href="https://www.facebook.com/fitor1a">John Benzh Cuy</a></h3>
+                                </div>
+                                <div class="entry-content open-sans-font">
+                                    <p>Bachelor of Science in Information Technology Major in Database System
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Article Ends -->
+                    <!-- Article Starts -->
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                        <article class="post-container">
+                            <div class="post-thumb">
+                                <a href="https://immhicoo.github.io/portfolio" class="d-block position-relative overflow-hidden">
+                                    <img src="images/mhico.jpg" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <div class="entry-header">
+                                    <h3><a href="https://immhicoo.github.io/portfolio">Mhico Sumile Gacutan</a></h3>
+                                </div>
+                                <div class="entry-content open-sans-font">
+                                    <p>Bachelor of Science in Information Technology Major in Database System
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
             <!-- Article Ends -->
             <!-- Article Starts -->
             

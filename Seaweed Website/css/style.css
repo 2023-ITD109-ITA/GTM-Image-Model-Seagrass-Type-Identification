@@ -256,7 +256,7 @@ body.light hr.separator {
 
   body.light #menuToggle > span,
   body.light #menuToggle input:checked ~ span {
-    background: #666;
+    background: #666666;
   }
 
   body.light #menu li a {

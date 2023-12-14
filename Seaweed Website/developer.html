@@ -23,34 +23,6 @@
 	</head>
 	
 	<body>
-		<section class="sub-header1">
-		
-			<nav>
-				<a href="index.html"><img src="images/logoseaweed.png" alt=""></a>
-                <h3 style="color: white;">SEAGRASS</h3>
-				
-					<div class="nav-links" id="navLinks">
-					<i class="fa fa-times" onclick="hideMenu()"></i>
-					<ul>
-						<li><a href="index.html">HOME</a></li>
-						<li><a href="seaweed.html">SEAGRASS</a></li>
-						<li><a href="aboutus.html">ABOUT US</a></li>
-						<li><a href="contactus.html">CONTACT US</a></li>
-						<li><a href="developer.html" class="nav-active">DEVELOPERS</a></li>
-						<!-- <li><a href="signup.html">SIGN UP</a></li>
-						<li><a href="login.html">LOGIN</a></li> -->
-						
-					</ul>
-					</div>
-					
-					<i class="fa fa-bars" onclick="showMenu()"></i>
-					
-			</nav>
-			
-			<h1>Developers</h1>
-							
-		</section>
-=======
     <!-- CSS Skin File -->
     <link href="css/skins/yellow.css" rel="stylesheet">
 
@@ -70,6 +42,93 @@
 
     <!-- Modernizr JS File -->
     <script src="js/modernizr.custom.js"></script>
+
+    <style>
+        .developer {
+            text-transform: uppercase;
+            background-image: linear-gradient(
+                -225deg,
+                #0c86b6 0%,
+                #37c00d 29%,
+                #839905 67%,
+                #f06406 100%
+            );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+            font-size: 120px;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+        .developer {
+            font-size: 30px; /* Adjust the font size for smaller screens */
+            text-align: center;
+            margin-top: 120px;
+        }
+        
+    }
+    @media only screen and (max-width: 600px) {
+    .seagrass {
+        display: none; /* Hide the element on smaller screens */
+        font-size: 65px; /* Adjust the font size for smaller screens */
+        text-align: center;
+    }
+}
+ @media(max-width: 700px)
+    {
+        
+        .text-box h1
+        {
+            font-size: 20px;
+        }
+        
+        .nav-links ul li
+        {
+            display: block;
+        }
+        
+        .nav-links
+        {
+            position: fixed;
+            background: #0000CD;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+            transition: 1s;
+        }
+        
+        nav .fa
+        {
+            display: block;
+            color: #fff;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+        .nav-links ul
+        {
+            padding: 30px;
+        }
+    }
+    
+    </style>
 </head>
 
 
@@ -79,7 +138,7 @@
 		
         <nav>
             <a href="index.html"><img src="images/logoseaweed.png" alt=""></a>
-            <h3 style="color: white;">SEAGRASS</h3>
+            <h3 class="seagrass">SEAGRASS</h3>
             
                 <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
@@ -95,11 +154,12 @@
                 </ul>
                 </div>
                 
-                <i class="fa fa-bars" onclick="showMenu()"></i>
+                <i class="" onclick="showMenu()"></i>
                 
         </nav>
         
-        <h1>Developers</h1>
+        <h1 class="developer">Developers</h1>
+
                         
     </section>
 <!-- Header Starts -->
@@ -115,6 +175,11 @@
             <span></span>
             <span></span>
             <ul class="list-unstyled" id="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="seaweed.html">SEAGRASS</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                    <li><a href="developer.html">DEVELOPERS</a></li>
               
             </ul>
         </div>
@@ -136,13 +201,13 @@
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="encarnado.html" class="d-block position-relative overflow-hidden">
-                            <img src="images/migs.jpg" class="img-fluid" alt="Blog Post">
+                        <a href="https://thestarrigel.github.io/portfolio/" class="d-block position-relative overflow-hidden">
+                            <img src="images/lex.jpg" class="img-fluid" alt="Blog Post">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="encarnado.html">Michael Angelo U. Encarnado</a></h3>
+                            <h3><a href="https://thestarrigel.github.io/portfolio/">Cruzalex Rigel D. Branzuela Jr.</a></h3>
                         </div>
                         <div class="entry-content open-sans-font">
                             <p>Bachelor of Science in Information Technology Major in Database System
@@ -156,13 +221,13 @@
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="roy.html" class="d-block position-relative overflow-hidden">
+                        <a href="https://xtianroy04.github.io/Mabilin_Portfolio/" class="d-block position-relative overflow-hidden">
                             <img src="images/roy.jpg" class="img-fluid" alt="">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="roy.html">Christian Roy S. Mabilin</a></h3>
+                            <h3><a href="https://xtianroy04.github.io/Mabilin_Portfolio/">Christian Roy S. Mabilin</a></h3>
                         </div>
                         <div class="entry-content open-sans-font">
                             <p>Bachelor of Science in Information Technology Major in Database System
@@ -176,13 +241,13 @@
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="kyle.html" class="d-block position-relative overflow-hidden">
+                        <a href="https://createsomecodes.github.io/Porfolio/" class="d-block position-relative overflow-hidden">
                             <img src="images/kyle.jpg" class="img-fluid" alt="">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="kyle.html">Kyle Adrian R. Mascunana</a></h3>
+                            <h3><a href="https://createsomecodes.github.io/Porfolio/">Kyle Adrian R. Mascunana</a></h3>
                         </div>
                         <div class="entry-content open-sans-font">
                             <p>Bachelor of Science in Information Technology Major in Database System
@@ -194,21 +259,152 @@
             <!-- Article Ends -->
             <!-- Article Starts -->
             
-           
-            <!-- Article Ends -->
-            <!-- Pagination Starts -->
-            <div class="col-12 mt-4">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center mb-0">
-                        <li class="page-item active"><a class="page-link" href="developer.html">1</a></li>
-                        <li class="page-item"><a class="page-link" href="developer1st.html">2</a></li>
-                        <li class="page-item"><a class="page-link" href="developer2nd.html">3</a></li>
-                      
-                    </ul>
-                </nav>
-            </div>
             <!-- Pagination Ends -->
         </div>
+        <div class="container">
+            <!-- Articles Starts -->
+            <div class="row">
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://jerome1jerome2.github.io/Portfolio-Jerome/portfolio/" class="d-block position-relative overflow-hidden">
+                                <img src="images/jerome.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://jerome1jerome2.github.io/Portfolio-Jerome/portfolio/">Jerome B. Porcado</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Bachelor of Science in Information Technology Major in Database System
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://paulcornel.github.io/myportfolio/my%20portfolio/" class="d-block position-relative overflow-hidden">
+                                <img src="images/paul.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://paulcornel.github.io/myportfolio/my%20portfolio/">John Paul Cornel</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Bachelor of Science in Information Technology Major in Database System
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://github.com/jandreysarip622/sarip_portfolio" class="d-block position-relative overflow-hidden">
+                                <img src="images/sarip.png" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://github.com/jandreysarip622/sarip_portfolio">Johnrey E. Sarip</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Bachelor of Science in Information Technology Major in Database System
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="container">
+                    <!-- Articles Starts -->
+                    <div class="row">
+                        <!-- Article Starts -->
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                            <article class="post-container">
+                                <div class="post-thumb">
+                                    <a href="https://alizamlagunay.github.io/lagunay/" class="d-block position-relative overflow-hidden">
+                                        <img src="images/lagunay.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-content">
+                                    <div class="entry-header">
+                                        <h3><a href="https://alizamlagunay.github.io/lagunay/">Aliza M. Lagunay</a></h3>
+                                    </div>
+                                    <div class="entry-content open-sans-font">
+                                        <p>Bachelor of Science in Information Technology Major in Database System
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Article Ends -->
+                        <!-- Article Starts -->
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                            <article class="post-container">
+                                <div class="post-thumb">
+                                    <a href="https://migsdaily25.github.io/porfolio/" class="d-block position-relative overflow-hidden">
+                                        <img src="images/migs.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-content">
+                                    <div class="entry-header">
+                                        <h3><a href="https://migsdaily25.github.io/porfolio/">Michael Angelo Encarnado</a></h3>
+                                    </div>
+                                    <div class="entry-content open-sans-font">
+                                        <p>Bachelor of Science in Information Technology Major in Database System
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                            <article class="post-container">
+                                <div class="post-thumb">
+                                    <a href="https://cassee05.github.io/MyPortfolio/" class="d-block position-relative overflow-hidden">
+                                        <img src="images/orion.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-content">
+                                    <div class="entry-header">
+                                        <h3><a href="https://cassee05.github.io/MyPortfolio/">Cassee O. Orion</a></h3>
+                                    </div>
+                                    <div class="entry-content open-sans-font">
+                                        <p>Bachelor of Science in Information Technology Major in Database System
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Article Ends -->
+                        <!-- Article Starts -->
+                        <!-- Pagination Ends -->
+                    </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                
+               
+                <!-- Article Ends -->
+                <!-- Pagination Starts -->
+                <div class="col-12 mt-4">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center mb-0">
+                            <li class="page-item active"><a class="page-link" href="developer.html">1</a></li>
+                            <li class="page-item"><a class="page-link" href="developer1st.html">2</a></li>
+                            <li class="page-item"><a class="page-link" href="developer2nd.html">3</a></li>
+                           
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Pagination Ends -->
+            </div>
         <!-- Articles Ends -->
     </div>
 
