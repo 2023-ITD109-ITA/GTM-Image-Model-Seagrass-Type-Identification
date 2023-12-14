@@ -19,7 +19,7 @@ function setup() {
      }
    };
    video = createCapture(constraints);
-   video.size(width, height);
+   
    video.hide();
  
    classifyVideo();
