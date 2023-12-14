@@ -73,10 +73,7 @@ function gotResults(error, results) {
   label = results[0].label;
   classifyVideo();
 }
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  video.size(width, height);
-}
+
 
 function mouseClicked() {
   const constraints = video.getConstraints();
