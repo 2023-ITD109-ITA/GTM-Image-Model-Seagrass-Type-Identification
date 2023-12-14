@@ -1,70 +1,97 @@
-// Copyright (c) 2019 ml5
-//
-// This software is released under the MIT License.
-// https://opensource.org/licenses/MIT
-
-/* ===
-ml5 Example
-Webcam Image Classification using a pre-trained customized model and p5.js
-This example uses p5 preload function to create the classifier
-=== */
-
-// Classifier Variable
-let classifier;
-// Model URL
-let imageModelURL = 'https://teachablemachine.withgoogle.com/models/bXy2kDNi/';
-
-// Video
 let video;
-let flippedVideo;
-// To store the classification
-let label = "";
+let label = "loading...";
+let classifier;
+let modelURL = 'https://teachablemachine.withgoogle.com/models/fPt94lkdX/';
 
-// Load the model first
 function preload() {
-  classifier = ml5.imageClassifier(imageModelURL + 'model.json');
+  classifier = ml5.imageClassifier(modelURL + 'model.json');
 }
 
 function setup() {
-  createCanvas(320, 260);
-  // Create the video
-  video = createCapture(VIDEO);
-  video.size(320, 240);
-  video.hide();
+   // Create a responsive canvas
+   let canvas = createCanvas(windowWidth, windowHeight);
+   canvas.parent('sketch-container');
+ 
+   // Create video capture with options for front and back camera
+   const constraints = {
+     video: {
+       facingMode: 'environment' // 'user' for front camera, 'environment' for back camera
+     }
+   };
+   video = createCapture(constraints);
+   video.size(width, height);
+   video.hide();
+ 
+   classifyVideo();
+}
 
-  flippedVideo = ml5.flipImage(video)
-  // Start classifying
-  classifyVideo();
+function classifyVideo() {
+  classifier.classify(video, gotResults);
 }
 
 function draw() {
-  background(0);
-  // Draw the video
-  image(flippedVideo, 0, 0);
+  background(255); // Set background color to white
+  image(video, 0, 0, width, height);
 
-  // Draw the label
-  fill(255);
-  textSize(16);
-  textAlign(CENTER);
-  text(label, width / 2, height - 4);
+  // Update HTML elements with the results
+  document.getElementById('label-result').innerText = 'This is ' + label;
+  document.getElementById('emoji-result').innerText=''+getInfo();
+
+  // Calculate responsive text size
+  let textSizeResponsive = width / 20; // Adjust the factor as needed
+  textSize(textSizeResponsive);
+  textAlign(CENTER, BOTTOM); // Align text to the bottom
+  fill(0); // Set text color to black
+  text(label, width / 2, height - textSizeResponsive);
+
+  // Calculate responsive emoji size and position
+
 }
 
-// Get a prediction for the current video frame
-function classifyVideo() {
-  flippedVideo = ml5.flipImage(video)
-  classifier.classify(flippedVideo, gotResult);
+function getInfo() {
+  // Pick an emoji, the "default" is train
+  if (label == "Holothuria Scabra") {
+    return "Phylum: Echinodermata \nOrder: Holothuroidea \nFamily: Holothuriidae \nGenus: Holothuria \nSpecies: Holothuria scabra \nPhysical appearance description: Brown, tan, yellow, reddish brown in color";
+  } else if (label == "Apostichopus japonicus") {
+    return "Phylum: Echinodermata \nClass: Holothuroidea \nOrder: Elasipodia \nFamily: Synallactida \nGenus: Apostichopus \nSpecies: Apostichopus japonicus \nPhysical appearance description: Irregular tube feet has highly branched feathery tentacles with soft and flexible elongated cylindrical body. Reddish brown in color.";
+  } else if (label == "Royal cucumber") {
+    return "Phylum: Echinodermata \nClass: Holothuroidea \nOrder: Asipodochirotida \nFamily: Stichpodidae \nGenus: Stichopus \nSpecies: Royal Cucumber \nPhysical appearance description: Uniform tube feet has 8 tentacles, large and robust tentacles with soft and flexible elongated worm like body. Pale in color with cream spots or patches.";
+  } else if (label == "Holothuria Atra") {
+    return "Phylum: Echinodermata \nOrder: Aspidochirotida \nGenus: Holothuria \nSpecies: Holothuria atra \nPhysical appearance description: Black, dark brown in color ";
+  } else if (label == "Holothuria Tubolosa") {
+    return "Phylum: Echinodermata \nOrder: Aspidochirotida \nGenus: Holothuria \nSpecies: Holothuria tubulosa \nPhysical appearance description: Dark brown/ black with white spots or markings. ";
+  } else {
+    return "Adjust your camera, I'm having a hard time identifying this one";
+  }
 }
 
-// When we get a result
-function gotResult(error, results) {
-  // If there is an error
+function gotResults(error, results) {
   if (error) {
     console.error(error);
     return;
   }
-  // The results are in an array ordered by confidence.
-  // console.log(results[0]);
   label = results[0].label;
-  // Classifiy again!
   classifyVideo();
 }
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  video.size(width, height);
+}
+
+function mouseClicked() {
+  const constraints = video.getConstraints();
+  const currentFacingMode = constraints.video.facingMode;
+
+  constraints.video.facingMode = currentFacingMode === 'user' ? 'environment' : 'user';
+
+  video.remove();
+  video = createCapture(constraints);
+  video.size(width, height);
+  video.hide();
+
+  classifyVideo();
+}
+
+window.onload = function() {
+  setup();
+};
