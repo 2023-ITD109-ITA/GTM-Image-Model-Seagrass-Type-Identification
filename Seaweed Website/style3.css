@@ -130,6 +130,26 @@ video {
 			color: #fff;
 		}
 
+.btn
+	{
+		display: inline-block;
+		text-decoration: none;
+		color: #5b5a5a;
+		border: 1px solid #5b5a5a;
+		padding: 12px 34px;
+		font-size: 13px;
+		background: transparent;
+		position: relative;
+		cursor: pointer;
+		border-radius: 25px;
+	}
+	
+		.btn:hover
+		{
+			border: 1px solid #0c6b24;
+			background: #0c6b24;
+			transition: 1s;
+		}
 		
 
 	.hero-btn
